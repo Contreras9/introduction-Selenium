@@ -11,6 +11,11 @@ public class SeleniumIntro {
         // WebDriver close get
         // WebDriver methods or class methods
         // ChromeDriver driver = new ChromeDriver();
+
+        // chromeDriver.exe -> Chrome browser
+        System.setProperty("webDriver.chrome.driver", "/Users/hamzahcontreras/Development/Java/SeleniumFundamentals/chromedriver_mac_arm64");
+
+        // webDriver.chrome.driver -> value of path
         WebDriver driver = new ChromeDriver();
 
     }
