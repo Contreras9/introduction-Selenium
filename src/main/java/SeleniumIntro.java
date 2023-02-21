@@ -17,6 +17,10 @@ public class SeleniumIntro {
 
         // webDriver.chrome.driver -> value of path
         WebDriver driver = new ChromeDriver();
+        driver.get("https://rahulshettyacademy.com/");
+        System.out.println(driver.getTitle());
+        System.out.println(driver.getCurrentUrl());
+        driver.close();
 
     }
 }
