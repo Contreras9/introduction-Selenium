@@ -13,7 +13,7 @@ public class SeleniumIntro {
         // ChromeDriver driver = new ChromeDriver();
 
         // chromeDriver.exe -> Chrome browser
-        // SeleniumManager - System.setProperty(key, values); optional
+        // SeleniumManager - System.setProperty(key, values); optional in later version of Selenium
         System.setProperty("webDriver.chrome.driver", "/Users/hamzahcontreras/Development/Java/SeleniumFundamentals/chromedriver_mac_arm64");
 
         // webDriver.chrome.driver -> value of path
