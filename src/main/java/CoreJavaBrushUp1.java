@@ -29,12 +29,12 @@ public class CoreJavaBrushUp1 {
 //            System.out.println(arr2[i]);
 //        }
 
-        String[] names = {"Hamzah", "Sumaya", "Mohamed"};
-        for (int i = 0; i < names.length; i++) {
-            System.out.println(names[i]);
+        String[] names1 = {"Hamzah", "Sumaya", "Mohamed", "Ivan"};
+        for (int i = 0; i < names1.length; i++) {
+            System.out.println(names1[i]);
         }
 
-        for (String name : names) {
+        for (String name : names1) {
             System.out.println(name);
         }
     }
