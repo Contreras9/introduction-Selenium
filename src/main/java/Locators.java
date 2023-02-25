@@ -20,8 +20,10 @@ public class Locators {
         driver.findElement(By.name("inputPassword")).sendKeys("hello123");
         driver.findElement(By.className("signInBtn")).click();
         System.out.println(driver.findElement(By.cssSelector("p.error")).getText());
+        driver.findElement(By.linkText("Forgot your password?")).click();
+        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("contreras");
 
-        // To find unique HTML element with the dev-console = $('p.error');
+        // To find unique HTML element with the dev-console = $('p.error'); for Xpath = $x('//input[@placeholder="Name"]');
 
         //        driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
     }
