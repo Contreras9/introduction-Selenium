@@ -25,9 +25,24 @@ public class Locators {
         driver.findElement(By.cssSelector("input[placeholder='Email']")).sendKeys("jared@gmail.com");
         driver.findElement(By.xpath("//input[@type='text'][2]")).clear();
         driver.findElement(By.cssSelector("input[type='text']:nth-child(3)")).sendKeys("yared@gmail.com");
+        driver.findElement(By.xpath("//form/input[3]")).sendKeys("123-099-0990");
+        driver.findElement(By.cssSelector("button.reset-pwd-btn")).click();
+        System.out.println(driver.findElement(By.cssSelector("form p")).getText());
 
-        // To find unique HTML element with the dev-console = $('p.error'); for Xpath = $x('//input[@placeholder="Name"]'); or //input[@type='text'][2]
 
-        //        driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
+        // CSS Selector -
+        // className -> tag.classname -> button.signInBtn -> .signInBtn
+        // id -> tag#id -> input#inputUsername
+        // tag[attribute='value'] -> input[placeholder='Username']
+        // tag[attribute='value']:nth-child(i) -> input[type='text']:nth-child(3)
+        // parent-tag child-tag -> form p
+
+        // xpath
+        // //tag[@attribute='value'] -> //input[@placeholder='Username']
+        // // //tag[@attribute='value'][i] -> //input[@type='text'][2]
+        // //parent-tag/child-tag -> //form/input[3]
+
+        // To find unique HTML element with the dev-console = $('p.error'); and for xpath = Xpath = $x('//input[@placeholder="Name"]');
+
     }
 }
