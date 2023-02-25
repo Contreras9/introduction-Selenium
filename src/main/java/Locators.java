@@ -2,6 +2,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.time.Duration;
+
 public class Locators {
     public static void main(String[] args) {
 
@@ -9,12 +11,17 @@ public class Locators {
         WebDriver driver = new ChromeDriver();
         driver.get("https://rahulshettyacademy.com/locatorspractice/");
 
+        // Implicit wait - 2 seconds time-out
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
         // The Locators are the way to identify an HTML element on a web page.
         // Locators - ID, Xpath, CSS Selector, name, className, Tag name, Link Text, Partial Link Text
         driver.findElement(By.id("inputUsername")).sendKeys("yared");
         driver.findElement(By.name("inputPassword")).sendKeys("hello123");
         driver.findElement(By.className("signInBtn")).click();
-        driver.findElement(By.cssSelector("p.error")).getText();
+        System.out.println(driver.findElement(By.cssSelector("p.error")).getText());
+
+        // To find unique HTML element with the dev-console = $('p.error');
 
         //        driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
     }
