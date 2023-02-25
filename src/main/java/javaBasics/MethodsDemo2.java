@@ -1,3 +1,5 @@
+package javaBasics;
+
 public class MethodsDemo2 {
 
     public String getUserData() {

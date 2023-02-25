@@ -1,3 +1,5 @@
+package javaBasics;
+
 public class MethodsDemo {
     public static void main(String[] args) {
         MethodsDemo methodsDemo = new MethodsDemo();
