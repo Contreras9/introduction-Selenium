@@ -21,9 +21,12 @@ public class Locators {
         driver.findElement(By.className("signInBtn")).click();
         System.out.println(driver.findElement(By.cssSelector("p.error")).getText());
         driver.findElement(By.linkText("Forgot your password?")).click();
-        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("contreras");
+        driver.findElement(By.xpath("//input[@placeholder='Name']")).sendKeys("yared");
+        driver.findElement(By.cssSelector("input[placeholder='Email']")).sendKeys("jared@gmail.com");
+        driver.findElement(By.xpath("//input[@type='text'][2]")).clear();
+        driver.findElement(By.cssSelector("input[type='text']:nth-child(3)")).sendKeys("yared@gmail.com");
 
-        // To find unique HTML element with the dev-console = $('p.error'); for Xpath = $x('//input[@placeholder="Name"]');
+        // To find unique HTML element with the dev-console = $('p.error'); for Xpath = $x('//input[@placeholder="Name"]'); or //input[@type='text'][2]
 
         //        driver.findElement(By.name("inputPassword")).sendKeys("rahulshettyacademy");
     }
