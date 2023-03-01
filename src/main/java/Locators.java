@@ -28,6 +28,11 @@ public class Locators {
         driver.findElement(By.xpath("//form/input[3]")).sendKeys("123-099-0990");
         driver.findElement(By.cssSelector("button.reset-pwd-btn")).click();
         System.out.println(driver.findElement(By.cssSelector("form p")).getText());
+        driver.findElement(By.xpath("//div[@class='forgot-pwd-btn-conainer']/button[1]")).click();
+        driver.findElement(By.cssSelector("#inputUsername")).sendKeys("yared");
+        driver.findElement(By.cssSelector("input[type*='pass']")).sendKeys("rahulshettyacademy");
+        driver.findElement(By.id("chkboxOne")).click();
+        driver.findElement(By.xpath("//button[contains(@class,'submit')]")).click();
 
 
         // CSS Selector -
@@ -36,11 +41,14 @@ public class Locators {
         // tag[attribute='value'] -> input[placeholder='Username']
         // tag[attribute='value']:nth-child(i) -> input[type='text']:nth-child(3)
         // parent-tag child-tag -> form p
+        // build CSSSelector -> input[type*='pass']
+        // combo build -> //div[@class='forgot-pwd-btn-conainer']/button[1]
 
         // xpath
         // //tag[@attribute='value'] -> //input[@placeholder='Username']
         // // //tag[@attribute='value'][i] -> //input[@type='text'][2]
         // //parent-tag/child-tag -> //form/input[3]
+        // build xpath -> //button[contains(@class,'submit')]
 
         // To find unique HTML element with the dev-console = $('p.error'); and for xpath = Xpath = $x('//input[@placeholder="Name"]');
 
