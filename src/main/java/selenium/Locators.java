@@ -53,6 +53,7 @@ public class Locators {
         // //parent-tag/child-tag -> //form/input[3]
         // build xpath -> //button[contains(@class,'submit')]
         // tag -> //h2
+        // text -> //button[text()='Log Out']
 
         // To find unique HTML element with the dev-console = $('p.error'); and for xpath = Xpath = $x('//input[@placeholder="Name"]');
 
