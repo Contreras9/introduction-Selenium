@@ -1,3 +1,5 @@
+package selenium;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -43,12 +45,14 @@ public class Locators {
         // parent-tag child-tag -> form p
         // build CSSSelector -> input[type*='pass']
         // combo build -> //div[@class='forgot-pwd-btn-conainer']/button[1]
+        // tag -> h2 or By.tagName("h2")
 
         // xpath
         // //tag[@attribute='value'] -> //input[@placeholder='Username']
         // // //tag[@attribute='value'][i] -> //input[@type='text'][2]
         // //parent-tag/child-tag -> //form/input[3]
         // build xpath -> //button[contains(@class,'submit')]
+        // tag -> //h2
 
         // To find unique HTML element with the dev-console = $('p.error'); and for xpath = Xpath = $x('//input[@placeholder="Name"]');
 
