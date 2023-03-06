@@ -46,7 +46,8 @@ public class Locators {
         // build CSSSelector -> input[type*='pass']
         // combo build -> //div[@class='forgot-pwd-btn-conainer']/button[1]
         // tag -> h2 or By.tagName("h2")
-        // sibling to sibling traverse -> to //header/div/button[1]/following-sibling::button[1]
+        // sibling to sibling traverse -> //header/div/button[1]/following-sibling::button[1]
+        // child to parent traverse -> //header/div/button[1]/following-sibling::button[1]/parent::div/button[2]
 
         // xpath
         // //tag[@attribute='value'] -> //input[@placeholder='Username']
