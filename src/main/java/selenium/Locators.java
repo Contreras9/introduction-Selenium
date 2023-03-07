@@ -48,6 +48,7 @@ public class Locators {
         // tag -> h2 or By.tagName("h2")
         // sibling to sibling traverse -> //header/div/button[1]/following-sibling::button[1]
         // child to parent traverse -> //header/div/button[1]/following-sibling::button[1]/parent::div/button[2]
+        // parent and child -> //div[@id='glsctl00_mainContent_ddl_originStation1_CTNR'] //a[@value='BLR']
 
         // xpath
         // //tag[@attribute='value'] -> //input[@placeholder='Username']
