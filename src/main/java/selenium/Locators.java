@@ -38,7 +38,7 @@ public class Locators {
 
 
         // CSS Selector -
-        // className -> tag.classname -> button.signInBtn -> .signInBtn
+        // className -> tag.classname -> button.signInBtn -> .signInBtn or chain with . -> .ui-state-default.ui-state-highlight.ui-state-active
         // id -> tag#id -> input#inputUsername
         // tag[attribute='value'] -> input[placeholder='Username']
         // tag[attribute='value']:nth-child(i) -> input[type='text']:nth-child(3)
