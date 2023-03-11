@@ -24,7 +24,7 @@ public class Base {
 
         int j = 0;
 
-        String[] veggiesNeeded = {"Cucumber", "Brocolli", "Beetroot"};
+        String[] veggiesNeeded = {"Cucumber", "Brocolli", "Beetroot", "Carrot"};
 
         driver.get("https://rahulshettyacademy.com/seleniumPractise/");
         Thread.sleep(3000);
@@ -37,9 +37,9 @@ public class Base {
 
             if (itemsNeededList.contains(veggieNameOnly)) {
                 j++;
-                driver.findElements(By.xpath("//button[text()='ADD TO CART']")).get(i).click();
+                driver.findElements(By.xpath(" //div[@class='product-action']/button")).get(i).click();
 
-                if (j == 3) {
+                if (j == veggiesNeeded.length) {
                     break;
                 }
             }
