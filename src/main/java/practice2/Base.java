@@ -22,12 +22,19 @@ public class Base {
         System.setProperty("webDriver.chrome.driver", "/Users/hamzahcontreras/Development/Java/SeleniumFundamentals/chromedriver_mac_arm64");
         WebDriver driver = new ChromeDriver(options);
 
-        int j = 0;
-
         String[] veggiesNeeded = {"Cucumber", "Brocolli", "Beetroot", "Carrot"};
 
         driver.get("https://rahulshettyacademy.com/seleniumPractise/");
         Thread.sleep(3000);
+        addItems(driver, veggiesNeeded);
+        driver.findElement(By.cssSelector("img[alt='Cart']")).click();
+        driver.findElement(By.xpath("//button[contains(.,'PROCEED TO CHECKOUT')]")).click();
+        driver.findElement(By.cssSelector("input.promoCode")).sendKeys("rahulshettyacademy");
+
+    }
+
+    public static void addItems(WebDriver driver, String[] veggiesNeeded) {
+        int j = 0;
         List<WebElement> veggies = driver.findElements(By.cssSelector("h4.product-name"));
 
         for (int i = 0; i < veggies.size(); i++) {
