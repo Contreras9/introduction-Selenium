@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.Assert;
 
+import java.time.Duration;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,6 +23,7 @@ public class Base {
 
         System.setProperty("webDriver.chrome.driver", "/Users/hamzahcontreras/Development/Java/SeleniumFundamentals/chromedriver_mac_arm64");
         WebDriver driver = new ChromeDriver(options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         String[] veggiesNeeded = {"Cucumber", "Brocolli", "Beetroot", "Carrot"};
 
@@ -30,7 +33,8 @@ public class Base {
         driver.findElement(By.cssSelector("img[alt='Cart']")).click();
         driver.findElement(By.xpath("//button[contains(.,'PROCEED TO CHECKOUT')]")).click();
         driver.findElement(By.cssSelector("input.promoCode")).sendKeys("rahulshettyacademy");
-
+        driver.findElement(By.cssSelector("button.promoBtn")).click();
+        System.out.println(driver.findElement(By.cssSelector("span.promoInfo")).getText());
     }
 
     public static void addItems(WebDriver driver, String[] veggiesNeeded) {
