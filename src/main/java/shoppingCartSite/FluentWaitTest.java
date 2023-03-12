@@ -1,4 +1,4 @@
-package practice2;
+package shoppingCartSite;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
