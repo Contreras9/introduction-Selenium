@@ -1,6 +1,5 @@
-package amazonSite;
+package amazonSite_RahulSite;
 
-import net.bytebuddy.implementation.bytecode.ShiftLeft;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
