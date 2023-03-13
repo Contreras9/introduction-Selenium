@@ -20,6 +20,7 @@ public class WindowHandles {
 
         System.setProperty("webDriver.chrome.driver", "/Users/hamzahcontreras/Development/Java/SeleniumFundamentals/chromedriver_mac_arm64");
         WebDriver driver = new ChromeDriver(options);
+
         driver.get("https://rahulshettyacademy.com/loginpagePractise/");
         driver.findElement(By.cssSelector("a.blinkingText")).click();
         Set<String> windows = driver.getWindowHandles();   // [parentId, childId]

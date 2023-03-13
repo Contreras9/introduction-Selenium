@@ -8,8 +8,11 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
+import java.util.Iterator;
+import java.util.Set;
+
 public class Scope {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--remote-allow-origins=*");
         options.addArguments("--disable notifications");
@@ -33,8 +36,19 @@ public class Scope {
         // Click on each link in the column and check if the pages are opening.
         for (int i = 1; i < columnDriver.findElements(By.tagName("a")).size(); i++) {
             String clickOnLinkTab = Keys.chord(Keys.COMMAND, Keys.ENTER);
+
+            // Opens all tabs
             columnDriver.findElements(By.tagName("a")).get(i).sendKeys(clickOnLinkTab);
+            Thread.sleep(5000);
         }
 
+        Set<String> windows = driver.getWindowHandles();
+        Iterator<String> it = windows.iterator();
+
+        while (it.hasNext()) {
+            driver.switchTo().window(it.next());
+            // Gets all titles
+            System.out.println(driver.getTitle());
+        }
     }
 }
