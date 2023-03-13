@@ -1,4 +1,4 @@
-package amazonSite_RahulSite;
+package amazon_Rahul_JQuery_Sites;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
